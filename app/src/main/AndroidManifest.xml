@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.sqllite">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <activity android:name=".updateStudent"></activity>
+        <activity android:name=".deleteStudent" />
+        <activity android:name=".four" />
+        <activity android:name=".three" />
+        <activity android:name=".two" />
+        <activity android:name=".one" />
+        <activity android:name=".About" />
+        <activity android:name=".MainActivity"
+            />
+        <activity android:name=".Home"
+            android:noHistory="true"
+            android:alwaysRetainTaskState="true"/>
+        <activity android:name=".Register" />
+
+        <activity android:name=".Login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

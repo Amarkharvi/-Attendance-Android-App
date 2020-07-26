@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    tools:ignore="DisableBaselineAlignment">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/stddetails"
+        android:gravity="center"
+        android:text="Student Query "
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:layout_gravity="center"
+        android:layout_marginTop="40sp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        style="@style/textBorder"
+
+        android:layout_alignTop="@id/stddetails"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/stdusn">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="USN"
+            android:textColorHint="#ffffff"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        style="@style/textBorder"
+        android:layout_alignTop="@id/stdusn"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/stdname">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="Student Name"
+            android:textColorHint="#ffffff"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignTop="@id/stdname"
+        android:layout_marginTop="100dp"
+        android:orientation="horizontal"
+        android:id="@+id/radiogrp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender :"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="20dp"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Male"
+            android:id="@+id/radio1"
+            android:textColor="#ffffff"
+            android:buttonTint="#ffffff"
+            android:onClick="RadioButtonClicked"
+            android:layout_marginLeft="10sp"
+            tools:ignore="HardcodedText,RtlHardcoded,UnusedAttribute" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Female"
+            android:id="@+id/radio2"
+            android:textColor="#ffffff"
+            android:onClick="RadioButtonClicked"
+            android:buttonTint="#ffffff"
+            android:layout_marginLeft="20sp"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage,UnusedAttribute" />
+
+    </RadioGroup>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Branch : "
+        android:id="@+id/branchtxt"
+        android:layout_alignTop="@id/radiogrp"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:layout_marginTop="40sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp" />
+
+    <Spinner
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:id="@+id/spinner1"
+        android:textAlignment="gravity"
+        android:outlineSpotShadowColor="#ffffff"
+        android:layout_alignTop="@id/radiogrp"
+        android:layout_marginTop="35dp"
+        android:gravity="center"
+        android:layout_alignLeft="@id/branchtxt"
+        android:layout_marginLeft="130dp"
+        android:layout_centerHorizontal="true"
+        android:outlineProvider="paddedBounds"
+        android:outlineAmbientShadowColor="#ffffff"
+        tools:ignore="UnusedAttribute" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        android:layout_alignTop="@id/spinner1"
+        android:layout_marginTop="70dp"
+        style="@style/textBorder"
+
+        android:layout_marginLeft="20dp"
+        app:counterMaxLength="10"
+        android:id="@+id/stdphone">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:hint="Phone"
+            android:textColorHint="#ffffff"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:id="@+id/linear"
+        android:layout_alignTop="@id/stdphone"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal" >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="120dp"
+            style="@style/textBorder"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="20dp"
+
+
+            android:id="@+id/stdsem">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:hint="Sem"
+                android:inputType="number"
+                android:textColorHint="#ffffff"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="160dp"
+            style="@style/textBorder"
+
+
+            android:id="@+id/stdsec">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:hint="Sec"
+                android:textColorHint="#ffffff"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:textSize="16sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/btn"
+        android:layout_marginLeft="30sp"
+        android:layout_marginBottom="25sp"
+        android:layout_alignBottom="@id/linear"
+        android:background="@drawable/rounded_rectangle"
+        tools:ignore="HardcodedText"
+        android:layout_marginStart="30sp" />
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/floatingmenu"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10sp"
+        android:layout_marginBottom="10sp"
+        android:layout_marginLeft="10sp"
+        app:menu_fab_size="normal"
+        app:menu_shadowColor="#66000000"
+        app:menu_showShadow="true"
+        app:menu_shadowRadius="4dp"
+        app:menu_shadowXOffset="1dp"
+        app:menu_shadowYOffset="3dp"
+        app:menu_openDirection="up"
+        app:menu_backgroundColor="@android:color/transparent"
+        app:menu_labels_position="left"
+        >
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini"
+            app:fab_label="Delete"
+            android:id="@+id/deletedata"
+            android:src="@drawable/delete"
+            />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini"
+            android:id="@+id/updatedata"
+            app:fab_label="Update"
+            android:src="@drawable/update"
+            />
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini"
+            app:fab_label="View"
+            android:id="@+id/viewdata"
+            android:src="@drawable/view"
+            />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+
+
+
+
+</RelativeLayout>

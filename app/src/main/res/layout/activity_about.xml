@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".About"
+    android:weightSum="10"
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryDark">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        tools:ignore="UselessLeaf,UselessParent">
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="30sp"
+            android:layout_marginHorizontal="50dp"
+            android:padding="30dp"
+            android:src="@drawable/ic_android_black_24dp"
+            android:visibility="visible"
+            android:background="@drawable/imageround"
+            tools:ignore="ContentDescription,UnusedAttribute" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="vertical"
+        tools:ignore="UselessLeaf">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Developed By : AmarKharvi"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:gravity="center_horizontal"
+            tools:ignore="HardcodedText,SpUsage" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:id="@+id/reference"
+            android:text="Reference : "
+            android:textColor="#ffffff"
+            android:textAlignment="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="60sp"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/txt"
+            android:layout_height="30dp"
+            android:text="www.developer.android.com"
+            android:clickable="true"
+            android:textSize="16sp"
+            android:contextClickable="true"
+            android:layout_marginTop="60sp"
+            android:gravity="center"
+            android:layout_alignLeft="@id/reference"
+            android:layout_marginLeft="120dp"
+            android:textColor="#4D67BD"
+            tools:ignore="HardcodedText,RtlHardcoded"
+            android:focusable="true"
+            tools:targetApi="m" />
+    </RelativeLayout>
+
+
+
+</LinearLayout>

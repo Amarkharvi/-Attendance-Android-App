@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">SqlLite</string>
+    <string name="male">Male</string>
+    <string-array name="names">
+        <item>CSE</item>
+        <item>ISE</item>
+        <item>ECE</item>
+        <item>EEE</item>
+        <item>ME</item>
+        <item>CIV</item>
+    </string-array>
+    <string name="gotQuote">
+        "/*  WhEn the snoW faLls
+               aNd The wHite wInds BloW,
+        The LoneWolf diEs, But tHe pAck SurVies. */"
+    </string>
+</resources>
